@@ -27,8 +27,8 @@ Ce dépôt rassemble mes scripts Python développés avec **CadQuery** pour gén
 cq-3d-lab/
 ├── implant_poreux/ # Scripts de modélisation paramétrique
 │ ├── implant_poreux.py # Grille de pores 2D générée par boucles
-│ ├── exports-stl/ # Fichiers de maillages générés prêts pour l'impression 3D
-│ ├── images/ # Captures d'écran des rendus 3D
+│ ├── implant_poreux.stl # Fichiers de maillages générés prêts pour l'impression 3D
+│ ├── implant_poreux_face.png et implant_poreux_biais.png # Captures d'écran des rendus 3D
 └── README.md
 ```
 
