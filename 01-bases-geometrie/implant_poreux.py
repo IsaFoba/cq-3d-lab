@@ -29,7 +29,7 @@ implant = (
     .hole(diametre_pore)
 )
 
-# 4. Affichage et Export
+# 5. Affichage et Export
 show_object(implant)
 cq.exporters.export(implant, "implant_poreux.stl")
 
