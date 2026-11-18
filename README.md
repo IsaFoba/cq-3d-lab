@@ -43,8 +43,8 @@ Création d'une matrice de perforations calibrées sur une plaque de base. L'esp
 
 * **Concepts clés :** Listes de coordonnées, `.pushPoints()`, exportation automatisée au format `.stl`.
 
-![Rendu de la grille poreuse](images/implant_poreux_face.png)
-![Rendu de la grille poreuse](images/implant_poreux_biais.png)
+![Rendu de la grille poreuse](implant_poreux_face.png)
+![Rendu de la grille poreuse](implant_poreux_biais.png)
 
 ---
 
