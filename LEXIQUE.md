@@ -1,4 +1,4 @@
- lexique technique avec synonymes courants en CAO (Conception Assistée par Ordinateur) et analogies
+Lexique technique avec synonymes courants en CAO (Conception Assistée par Ordinateur) et analogies
 
 1. Finitions et Arêtes
 
