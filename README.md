@@ -28,17 +28,28 @@ cq-3d-lab/
 ├── 01-bases-geometrie/ # Scripts de modélisation paramétrique
 │ ├── ma_premiere_piece.py # Bloc simple avec perçage central
 │ ├── implant_poreux.py # Grille de pores 2D générée par boucles
-│ └── implant_3d_interconnecte.py # Structure poreuse 3D (axes X, Y, Z) avec congés
+│ ├── implant_3d_interconnecte.py # Structure poreuse 3D (axes X, Y, Z) avec congés
+│ └── gradiant_porosite.py # Variation de densité radiale (biomimétisme osseux)
 ├── exports-stl/ # Fichiers de maillages générés prêts pour l'impression 3D
-├── images/ # Captures d'écran des rendus 3D
+├── images/ # Captures d'écran des rendus 3D et coupes internes
+├── LEXIQUE.md # Glossaire technique CAO & Python
 └── README.md
 ```
 
 ---
 
-## 🚀 Réalisations & Aperçus 3D
+## Réalisations & Aperçus 3D
 
-### 1. Structure poreuse interconnectée 3D (`implant_3d_interconnecte.py`)
+### 1. Gradient de porosité radial (`gradient_porosite.py`)
+Modélisation d'une structure biomimétique inspirée de l'os naturel : très dense sur les bords extérieurs pour la résistance mécanique, et fortement poreuse au cœur pour la vascularisation. Le diamètre de chaque perforation est calculé dynamiquement selon sa distance par rapport au centre.
+
+* **Concepts clés :** Calculs trigonométriques (`math.sqrt`), proportionnalité géométrique, gestion absolue des repères (`CenterOfBoundBox`), inspection interne par soustraction booléenne (`.cut()`).
+
+![Rendu du gradient de porosité](images/gradiant_porosite.png)
+
+---
+
+### 2. Structure poreuse interconnectée 3D (`implant_3d_interconnecte.py`)
 Génération algorithmique d'un échafaudage (*scaffold*) cubique doté de canaux traversants sur les trois axes de l'espace (X, Y et Z) et d'arêtes extérieures adoucies.
 
 * **Concepts clés :** Paramétrisation dimensionnelle, calcul de grilles de coordonnées par boucles imbriquées, sélection de faces multiples (`>Z`, `>Y`, `>X`), application de congés (`.fillet()`).
@@ -47,16 +58,21 @@ Génération algorithmique d'un échafaudage (*scaffold*) cubique doté de canau
 
 ---
 
-### 2. Grille poreuse paramétrique (`implant_poreux.py`)
+### 3. Grille poreuse paramétrique (`implant_poreux.py`)
 Création d'une matrice de perforations calibrées sur une plaque de base. L'espacement et le diamètre des pores s'ajustent dynamiquement via les variables en tête de script.
 
 * **Concepts clés :** Listes de coordonnées, `.pushPoints()`, exportation automatisée au format `.stl`.
 
-![Rendu de la grille poreuse](images/implant_poreux-biais.png)
+![Rendu de la grille poreuse](images/implant_poreux.png)
 
 ---
 
-## Prochaines étapes (Feuille de route)
-* [ ] **Variation de densité :** Faire évoluer le diamètre des pores selon leur position géométrique (gradient de porosité).
-* [ ] **Imagerie médicale (DICOM) :** Extraction et segmentation d'anatomies réelles via **3D Slicer** et **Python (`pydicom`)** pour générer des guides ou implants sur mesure.
-* [ ] **Génération directe de G-code :** Pilotage bas niveau des trajectoires d'extrusion.
+## 📖 Documentation complémentaire
+* Consultez le **[Lexique Technique CAO & Python](LEXIQUE.md)** pour retrouver les définitions et analogies des commandes utilisées dans ces scripts.
+
+---
+
+## 📈 Prochaines étapes (Feuille de route)
+* **Imagerie médicale (DICOM) :** Extraction et segmentation d'anatomies réelles via **3D Slicer** et **Python (`pydicom`)** pour générer des guides chirurgicaux ou implants sur mesure.
+* **Modélisation organique :** Génération de structures tubulaires et courbes (réseaux vasculaires).
+* **Génération directe de G-code :** Pilotage bas niveau des trajectoires d'extrusion.
