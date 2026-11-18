@@ -14,6 +14,7 @@ Lexique technique avec synonymes courants en **CAO** (Conception Assistée par O
 • **edge** (Prononcer « èdje ») : Arête. C'est la ligne où deux faces d'un objet se rejoignent. Un cube possède 12 arêtes.  
 
 &emsp; • Synonymes : Bord, segment, ligne de jonction.
+
  &nbsp;
  
 
@@ -59,6 +60,7 @@ Lexique technique avec synonymes courants en **CAO** (Conception Assistée par O
 
  
 • **CenterOfBoundBox** : Centre géométrique. C'est le point situé exactement au milieu de la boîte englobante. Il permet de remettre le compteur (0, 0) pile au centre de votre pièce.
+
  &nbsp;
 
 
