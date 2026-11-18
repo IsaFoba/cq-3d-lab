@@ -1,4 +1,4 @@
-# 🧪 CQ-3D-Lab : Modélisation Paramétrique & Fabrication Additive en Python
+# CQ-3D-Lab : Modélisation Paramétrique & Fabrication Additive en Python
 
 Bienvenue dans mon laboratoire de recherche et de développement dédié à la **CAO paramétrique par le code** et à la **fabrication additive** (impression 3D). 
 
@@ -6,18 +6,18 @@ Ce dépôt rassemble mes scripts Python développés avec **CadQuery** pour gén
 
 ---
 
-## 🎯 Objectifs du projet
+## Objectifs du projet
 * **Automatisation géométrique :** Remplacer la modélisation manuelle par des algorithmes paramétriques reproductibles.
 * **Ingénierie biomédicale & MedTech :** Concevoir des structures poreuses interconnectées favorisant la circulation des fluides et la colonisation cellulaire.
 * **Chaîne numérique complète :** Maîtriser le flux de travail du script Python jusqu'à l'exportation et la validation du maillage `.stl` (slicing).
 
 ---
 
-## 🛠️ Technologies utilisées
+## Technologies utilisées
 * **Langage :** Python 3
 * **Moteur CAO :** [CadQuery](https://github.com) (basé sur OpenCascade)
 * **Environnement :** CQ-editor
-* **Validation & Slicing :** PrusaSlicer / Visualiseur STL
+* **Validation & Slicing :** PrusaSlicer / Visualiseur STL (~online 3d viewer)
 
 ---
 
@@ -52,11 +52,11 @@ Création d'une matrice de perforations calibrées sur une plaque de base. L'esp
 
 * **Concepts clés :** Listes de coordonnées, `.pushPoints()`, exportation automatisée au format `.stl`.
 
-![Rendu de la grille poreuse](images/implant_poreux_biais.png)
+![Rendu de la grille poreuse](images/implant_poreux-biais.png)
 
 ---
 
-## 📈 Prochaines étapes (Feuille de route)
+## Prochaines étapes (Feuille de route)
 * [ ] **Variation de densité :** Faire évoluer le diamètre des pores selon leur position géométrique (gradient de porosité).
 * [ ] **Imagerie médicale (DICOM) :** Extraction et segmentation d'anatomies réelles via **3D Slicer** et **Python (`pydicom`)** pour générer des guides ou implants sur mesure.
 * [ ] **Génération directe de G-code :** Pilotage bas niveau des trajectoires d'extrusion.
